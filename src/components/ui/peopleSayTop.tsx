@@ -18,7 +18,7 @@ export const PeopleSayTop = () => {
           initial={{ x: '0%' }}
           animate={{ x: ['0%', '-50%', '0%', '-50%'] }}
           transition={{
-            duration: 50,
+            // duration: 1,
             times: [0, 1, 1, 2],
             ease: 'linear',
             repeat: Infinity,

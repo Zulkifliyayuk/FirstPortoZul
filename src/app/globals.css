@@ -186,6 +186,10 @@
 /* end of shadcn theme */
 /* ---------------------------------------- */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-neutral-600 text-sm font-normal text-neutral-100;
 
@@ -230,12 +234,12 @@ body {
   }
 
   .animate-marqueeMinus {
-    animation: marqueeMinus 50s linear infinite;
+    animation: marqueeMinus 70s linear infinite;
     will-change: transform;
   }
 
   .animate-marqueePlus {
-    animation: marqueePlus 60s linear infinite;
+    animation: marqueePlus 70s linear infinite;
     will-change: transform;
   }
 
