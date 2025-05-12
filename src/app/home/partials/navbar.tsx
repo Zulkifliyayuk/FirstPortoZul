@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useEffect, useState } from 'react';
 
 import Button from '@/components/ui/button';
 import {
@@ -19,7 +20,25 @@ import {
 import { navigationData } from '@/app/constants/navigationData';
 
 const Navbar = () => {
+  const [activeHash, setActiveHash] = useState('');
   const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+
+    // Init
+    handleHashChange();
+
+    // Listen to hash change
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   const background = useTransform(
     scrollY,
     [0, 100],
@@ -53,7 +72,12 @@ const Navbar = () => {
               <li key={data.label}>
                 <Link
                   href={data.href}
-                  className='hover:text-secondary-200 px-2'
+                  onClick={() => setActiveHash(data.href)}
+                  className={`font-regular text-md hover:text-secondary-200 px-2 leading-7.5 ${
+                    activeHash === data.href
+                      ? 'text-secondary-200'
+                      : 'text-neutral-100'
+                  }`}
                 >
                   {data.label}
                 </Link>
@@ -108,7 +132,12 @@ const Navbar = () => {
                         <SheetClose asChild>
                           <Link
                             href={data.href}
-                            className='text-md-regular text-neutral-100'
+                            onClick={() => setActiveHash(data.href)}
+                            className={`font-regular text-md hover:text-secondary-200 leading-7.5 ${
+                              activeHash === data.href
+                                ? 'text-secondary-200'
+                                : 'text-neutral-100'
+                            }`}
                           >
                             {data.label}
                           </Link>

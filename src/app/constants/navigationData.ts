@@ -4,7 +4,7 @@ type NavigationProps = {
 };
 
 export const navigationData: NavigationProps[] = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '#Home' },
   { label: 'About', href: '#About' },
   { label: 'Skills', href: '#Skills' },
   { label: 'Projects', href: '#Projects' },
