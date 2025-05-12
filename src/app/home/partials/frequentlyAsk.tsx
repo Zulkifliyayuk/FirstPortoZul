@@ -13,6 +13,7 @@ const FrequentlyAsk = () => {
       title='Frequently Asked Question'
       subtitle='Find answers to some of the frequently asked questions below.'
       id='FAQ'
+      className='scroll-mt-10'
     >
       <div className='mt-8 flex flex-col gap-4 md:mt-12 md:gap-5'>
         {FAQData.map((dataFAQ, index) => (

@@ -88,6 +88,7 @@ const Navbar = () => {
         <div className='flex-end gap-4'>
           <Button asChild size='default' className='hidden px-11.75 lg:flex'>
             <Link
+              onClick={() => setActiveHash('#Contact')}
               href='#Contact'
               className='text-md flex w-full items-center leading-7.5 font-medium text-neutral-100'
             >
@@ -107,7 +108,7 @@ const Navbar = () => {
             size='icon'
             className='flex items-center px-2.5 lg:hidden'
           >
-            <Link href='#Contact'>
+            <Link onClick={() => setActiveHash('#Contact')} href='#Contact'>
               <Image
                 src='/icons/sms.png'
                 alt='sms'
@@ -150,6 +151,7 @@ const Navbar = () => {
                   <Button asChild size='default' className='mt-6 w-full'>
                     <Link
                       href='#Contact'
+                      onClick={() => setActiveHash('#Contact')}
                       className='text-md flex items-center leading-7.5 font-medium text-neutral-100'
                     >
                       <Image

@@ -11,13 +11,14 @@ import { Section } from '@/components/layout/section';
 import { BackCircle } from '@/components/ui/backCircle';
 
 import { SkillData } from '@/app/constants/skillData';
+import { cn } from '@/lib/utils';
 
 const SkillStatistics = () => {
   const { ref, isInView } = useInView();
   return (
     <div
       id='Skills'
-      className='relative mx-auto my-0'
+      className={cn('relative mx-auto my-0', 'scroll-mt-10')}
       style={{
         width: adjustClamp(360, 1442, 1442),
       }}

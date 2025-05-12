@@ -10,10 +10,15 @@ import { BoxBorder } from '@/components/ui/boxBorder';
 import Button from '@/components/ui/button';
 import { Stars } from '@/components/ui/stars';
 
+import { cn } from '@/lib/utils';
+
 const Hero = () => {
   return (
     <div
-      className='relative mx-auto my-0 flex w-full flex-col items-center pt-26 md:pt-55.5'
+      className={cn(
+        'relative mx-auto my-0 flex w-full flex-col items-center pt-26 md:pt-55.5',
+        'scroll-mt-10'
+      )}
       style={{
         width: adjustClamp(360, 1442, 1442),
       }}

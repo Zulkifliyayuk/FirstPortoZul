@@ -6,11 +6,13 @@ import { adjustClamp } from '@/components/layout/functions';
 import { PeopleSayBottom } from '@/components/ui/peopleSayBottom';
 import { PeopleSayTop } from '@/components/ui/peopleSayTop';
 
+import { cn } from '@/lib/utils';
+
 const PeopleSayMarque = () => {
   return (
     <div
       id='About'
-      className='relative mx-auto my-0'
+      className={cn('relative mx-auto my-0', 'scroll-mt-10')}
       style={{
         width: adjustClamp(360, 1442, 1442),
       }}

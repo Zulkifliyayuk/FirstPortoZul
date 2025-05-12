@@ -2,6 +2,8 @@ import React from 'react';
 
 import { adjustFlexLeft, adjustFlexRight } from '@/components/layout/functions';
 
+import { cn } from '@/lib/utils';
+
 type SectionProps = {
   children: React.ReactNode;
   title: string;
@@ -9,6 +11,7 @@ type SectionProps = {
   id?: string;
   left?: number;
   right?: number;
+  className?: string;
 };
 
 export const SectionHorizontal: React.FC<SectionProps> = ({
@@ -18,9 +21,10 @@ export const SectionHorizontal: React.FC<SectionProps> = ({
   id,
   left = 604,
   right = 604,
+  className,
 }) => {
   return (
-    <div className='custom-container py-10 md:py-20' id={id}>
+    <div className={cn('custom-container py-10 md:py-20', className)} id={id}>
       {/* heading */}
       <div className='flex flex-wrap gap-3 md:gap-6.75'>
         <div
@@ -48,9 +52,10 @@ export const Section: React.FC<SectionProps> = ({
   title,
   subtitle,
   id,
+  className,
 }) => {
   return (
-    <div className='custom-container py-10 md:py-20' id={id}>
+    <div className={cn('custom-container py-10 md:py-20', className)} id={id}>
       {/* heading */}
       <div className='text-center'>
         <h2 className='text-display-sm md:text-display-2xl font-extrabold text-neutral-100'>

@@ -18,6 +18,7 @@ const Experiences = () => {
       left={620}
       right={513}
       id='Projects'
+      className='scroll-mt-10'
     >
       <div className='flex-center flex flex-wrap gap-x-8 gap-y-8 md:gap-x-6 md:gap-y-12'>
         {experienceData.map((dataExperience, index) => (
