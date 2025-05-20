@@ -13,7 +13,7 @@ const FormContact = () => {
   return (
     <div
       id='Contact'
-      className={cn('relative mx-auto my-0 overflow-hidden', 'scroll-mt-10')}
+      className={cn('relative mx-auto my-0', 'scroll-mt-10')}
       style={{
         width: adjustClamp(360, 1442, 1442),
       }}
@@ -27,18 +27,20 @@ const FormContact = () => {
       </div>
 
       {/* Cloud */}
-      <div
-        className='absolute z-1 rounded-full bg-[#8243EA]/40 [filter:blur(159px)] md:[filter:blur(425px)]'
-        style={{
-          width: adjustClamp(471, 866, 1442),
-          height: adjustClamp(471, 864, 1442),
-          top: adjustClamp(283, 149, 1442),
-          left: adjustClamp(199, 748, 1442),
-        }}
-      ></div>
-
+      <div className='relative'>
+        <div
+          className='absolute z-1 rounded-full bg-[#8243EA]/40 [filter:blur(159px)] md:[filter:blur(185px)]'
+          style={{
+            width: adjustClamp(421, 875, 1442),
+            height: adjustClamp(421, 425, 1442),
+            top: adjustClamp(283, 49, 1442),
+            left: adjustClamp(199, 848, 1442),
+          }}
+        ></div>
+      </div>
       <div className='absolute top-[172px] right-[180px] z-1 rounded-full bg-[#8243EA]/40 [filter:blur(159px)] max-md:block max-md:h-[196] max-md:w-[196px] md:hidden'></div>
 
+      {/* content */}
       <div className='mx-auto py-10 md:py-20'>
         <div className='flex-center md:flex-between flex-wrap gap-x-55.75 gap-y-6'>
           <div

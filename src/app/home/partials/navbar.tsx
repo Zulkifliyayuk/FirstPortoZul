@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <motion.header
       style={{ background, backdropFilter: backdropBlur }}
-      className='fixed top-0 z-140 mx-auto my-0 w-full max-w-[1442px]'
+      className='fixed top-0 z-140 mx-auto my-0 w-full max-w-[1442px] bg-neutral-600/10'
     >
       {/* cloud */}
       <div className='absolute bottom-[0.19px] left-[86px] h-55 w-64 rounded-full bg-[#6831E1]/40 [filter:blur(86.03px)] max-md:hidden'></div>
