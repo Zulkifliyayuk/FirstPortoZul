@@ -13,7 +13,7 @@ const FormContact = () => {
   return (
     <div
       id='Contact'
-      className={cn('relative mx-auto my-0', 'scroll-mt-10')}
+      className={cn('relative mx-auto my-0 overflow-hidden', 'scroll-mt-10')}
       style={{
         width: adjustClamp(360, 1442, 1442),
       }}
