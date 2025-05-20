@@ -39,7 +39,7 @@ export const BackCircle = () => {
         </div>
       </div>
 
-      {/* Outer Circle */}
+      {/* items miniplanets */}
       <div>
         <div className='center-center'>
           <SkillMotion
@@ -59,6 +59,39 @@ export const BackCircle = () => {
             start={8}
           />
         </div>
+
+        <div className='center-center'>
+          <SkillMotion
+            style={{
+              width: adjustClamp(209.88, 385, 1208),
+              height: adjustClamp(209.88, 385, 1208),
+            }}
+            start={25}
+          />
+        </div>
+        <div className='center-center'>
+          <SkillMotion
+            style={{
+              width: adjustClamp(209.88, 385, 1208),
+              height: adjustClamp(209.88, 385, 1208),
+            }}
+            start={90}
+          />
+        </div>
+
+        <div className='center-center'>
+          <SkillMotion
+            style={{
+              width: adjustClamp(145, 266, 1208),
+              height: adjustClamp(145, 266, 1208),
+            }}
+            start={80}
+          />
+        </div>
+      </div>
+
+      {/* Outer Circle */}
+      <div>
         <div className='center-center'>
           <SkillMotion
             style={{
@@ -100,24 +133,6 @@ export const BackCircle = () => {
               width: adjustClamp(209.88, 385, 1208),
               height: adjustClamp(209.88, 385, 1208),
             }}
-            start={25}
-          />
-        </div>
-        <div className='center-center'>
-          <SkillMotion
-            style={{
-              width: adjustClamp(209.88, 385, 1208),
-              height: adjustClamp(209.88, 385, 1208),
-            }}
-            start={90}
-          />
-        </div>
-        <div className='center-center'>
-          <SkillMotion
-            style={{
-              width: adjustClamp(209.88, 385, 1208),
-              height: adjustClamp(209.88, 385, 1208),
-            }}
             start={64}
             img='/icons/skillReact.png'
           />
@@ -144,15 +159,6 @@ export const BackCircle = () => {
             }}
             start={16}
             img='/icons/skillFramer.png'
-          />
-        </div>
-        <div className='center-center'>
-          <SkillMotion
-            style={{
-              width: adjustClamp(145, 266, 1208),
-              height: adjustClamp(145, 266, 1208),
-            }}
-            start={80}
           />
         </div>
       </div>
