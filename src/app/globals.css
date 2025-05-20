@@ -228,10 +228,6 @@ body {
     @apply bg-gradient-to-r from-[#DC49A6] to-[#8746EB];
   }
 
-  .bg-gradient-to-b {
-    @apply bg-gradient-to-b from-[#DC49A6] to-[#8746EB];
-  }
-
   .animate-marqueeMinus {
     animation: marqueeMinus 70s linear infinite;
     will-change: transform;

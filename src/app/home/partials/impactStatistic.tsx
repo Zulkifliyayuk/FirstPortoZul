@@ -55,7 +55,7 @@ const ImpactStatistics = () => {
             className='h-full w-auto object-contain'
           />
           <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-            <Icon icon='fa:play-circle' className='size-4 md:size-17' />
+            <Icon icon='fa:play-circle' className='size-5 md:size-17' />
           </div>
         </div>
       </div>

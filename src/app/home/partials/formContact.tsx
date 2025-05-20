@@ -3,9 +3,9 @@
 import React from 'react';
 
 import { adjustClamp } from '@/components/layout/functions';
-import { BoxBackground } from '@/components/ui/boxBackground';
+import { BoxBackgroundContactForm } from '@/components/ui/boxBackground';
 import { ContactForm } from '@/components/ui/contactForm';
-import { Stars } from '@/components/ui/stars';
+import { StarsContactForm } from '@/components/ui/stars';
 
 import { cn } from '@/lib/utils';
 
@@ -18,22 +18,26 @@ const FormContact = () => {
         width: adjustClamp(360, 1442, 1442),
       }}
     >
-      {/* STARS - spaced out */}
-      <Stars />
+      {/* STARS */}
+      <StarsContactForm />
 
       {/* box-background */}
-      <div className='absolute right-0 bottom-0 z-0 translate-x-[40px] translate-y-[65px]'>
-        <BoxBackground widht={73} height={73} />
+      <div className='absolute right-0 bottom-0 z-0 translate-x-[70px] translate-y-[65px] md:translate-x-[40px] md:translate-y-[65px]'>
+        <BoxBackgroundContactForm width={75} height={75} />
       </div>
 
       {/* Cloud */}
       <div
-        className='absolute -right-1/5 -bottom-[80px] z-1 rounded-full bg-[#8243EA66] [filter:blur(250px)] md:-bottom-[80px]'
+        className='absolute z-1 rounded-full bg-[#8243EA]/40 [filter:blur(159px)] md:[filter:blur(425px)]'
         style={{
-          width: adjustClamp(471, 766, 1442),
-          height: adjustClamp(471, 766, 1442),
+          width: adjustClamp(471, 866, 1442),
+          height: adjustClamp(471, 864, 1442),
+          top: adjustClamp(283, 149, 1442),
+          left: adjustClamp(199, 748, 1442),
         }}
       ></div>
+
+      <div className='absolute top-[172px] right-[180px] z-1 rounded-full bg-[#8243EA]/40 [filter:blur(159px)] max-md:block max-md:h-[196] max-md:w-[196px] md:hidden'></div>
 
       <div className='mx-auto py-10 md:py-20'>
         <div className='flex-center md:flex-between flex-wrap gap-x-55.75 gap-y-6'>

@@ -54,9 +54,11 @@ const Navbar = () => {
       style={{ background, backdropFilter: backdropBlur }}
       className='fixed top-0 z-140 mx-auto my-0 w-full max-w-[1442px]'
     >
+      {/* cloud */}
+      <div className='absolute bottom-[0.19px] left-[86px] h-55 w-64 rounded-full bg-[#6831E1]/40 [filter:blur(86.03px)] max-md:hidden'></div>
+
       <div className='flex-between custom-container relative h-16 lg:h-21'>
-        {/* cloud */}
-        <div className='absolute bottom-0 h-55 w-64 rounded-full bg-[#6831E166] [filter:blur(96.03px)] max-md:hidden'></div>
+        {/* Logo */}
         <Link href='#'>
           <Image
             src='/images/logoVector.png'

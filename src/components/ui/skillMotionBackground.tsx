@@ -33,15 +33,21 @@ export const SkillMotionBackground: React.FC<React.ComponentProps<'div'>> = ({
   let cx = 0;
   let cy = 0;
   let radius = 0;
+  const strokeWidth = 2;
 
   if (styleWidth && styleHeight) {
     cx = styleWidth / 2;
     cy = styleHeight / 2;
-    radius = Math.min(styleWidth, styleHeight) / 2 - 20;
+
+    radius = Math.min(styleWidth, styleHeight) / 2 - strokeWidth / 2;
   }
 
   return (
-    <div ref={ref} style={{ position: 'relative', ...restProps.style }}>
+    <div
+      ref={ref}
+      style={{ position: 'relative', ...restProps.style }}
+      // className='border border-amber-400'
+    >
       <svg
         width={styleWidth}
         height={styleHeight}
@@ -52,7 +58,7 @@ export const SkillMotionBackground: React.FC<React.ComponentProps<'div'>> = ({
           cy={cy}
           r={radius}
           stroke='#242424'
-          strokeWidth='2'
+          strokeWidth={strokeWidth}
           fill='transparent'
         />
       </svg>

@@ -27,7 +27,12 @@ type CarierJourneyElementProps = {
 
 export const Cariers: React.FC<CarierJourneyElementProps> = ({ children }) => {
   return (
-    <div className='grid grid-cols-[1.75rem_auto] gap-x-2 md:grid-cols-[3rem_auto] md:gap-x-6'>
+    <div className='relative grid grid-cols-[1.75rem_auto] gap-x-2 md:grid-cols-[3rem_auto] md:gap-x-6'>
+      <div className='absolute inset-y-0 left-[0.875rem] w-1 -translate-x-1/2 md:left-[1.5rem] md:w-1.25'>
+        {/* panjang garis = auto terhenti dengan last child line-decoration */}
+        <div className='h-full w-full rounded-full bg-gradient-to-b from-[#DC49A6] to-[#8746EB]' />
+      </div>
+      {/* Elemen anak */}
       {React.Children.map(children, (child, idx) =>
         React.cloneElement(child, { index: idx + 1 })
       )}
@@ -49,16 +54,17 @@ export const CarierJourneyComp: React.FC<CarierJourneyDataProps> = ({
       {/* left column */}
       <div
         className={cn(
-          'group relative mb-4 last:mb-0 md:mb-8 [&:nth-last-child(2)]:mb-0',
+          'group relative mb-0 last:mb-0 md:mb-0 [&:nth-last-child(2)]:mb-0',
           //target child
-          '[&:nth-last-child(2)>.line-decoration]:h-0'
+          '[&:nth-last-child(2)>.line-decoration]:scale-y-100'
         )}
       >
         {/* line decoration */}
         <div
           className={cn(
-            'line-decoration absolute left-1/2 w-1 -translate-x-1/2 bg-gradient-to-b transition-all duration-1300 md:w-1.25',
-            isInView ? 'h-[calc(100%+2rem)] md:h-[calc(100%+2rem)]' : 'h-0'
+            'line-decoration absolute top-0 bottom-0 left-1/2 w-1.5 origin-bottom -translate-x-1/2 rounded-full bg-neutral-600 transition-all duration-[2500ms] md:w-2.5',
+
+            isInView ? 'scale-y-0' : 'scale-y-100'
           )}
         />
 

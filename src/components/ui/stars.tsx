@@ -1,66 +1,88 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { adjustClamp } from '../layout/functions';
 
-const baseStars = [
-  { top: 15, left: 10 },
-  { top: 55, left: 15 },
-  { top: 95, left: 25 },
-  { top: 25, left: 60 },
-  { top: 40, left: 75 },
-  { top: 65, left: 88 },
-  { top: 85, left: 92 },
-  { top: 8, left: 12 },
-  { top: 5, left: 28 },
-  { top: 18, left: 10 },
-  { top: 20, left: 20 },
-  { top: 14, left: 32 },
-  { top: 38, left: 44 },
-  { top: 46, left: 52 },
-  { top: 33, left: 63 },
-  { top: 43, left: 35 },
-  { top: 50, left: 50 },
-  { top: 90, left: 78 },
-  { top: 93, left: 68 },
-  { top: 74, left: 90 },
-  { top: 83, left: 93 },
-  { top: 97, left: 76 },
-  { top: 79, left: 96 },
-  { top: 81, left: 86 },
-  { top: 68, left: 98 },
-  { top: 75, left: 80 },
-  { top: 72, left: 82 },
-  { top: 67, left: 84 },
-  { top: 62, left: 87 },
-  { top: 55, left: 83 },
-  { top: 40, left: 95 },
+const baseStarsHomeDinamic = [
+  { topMd: 135, leftMd: 97, top: 80, left: 86 },
+  { topMd: 344, leftMd: 190, top: 310, left: 27 },
+  { topMd: 139, leftMd: 947, top: 100, left: 297 },
+  { topMd: 218, leftMd: 1166, top: 227, left: 306 },
+  { topMd: 376, leftMd: 1302, top: 308, left: 320 },
+  { topMd: 525, leftMd: 1295, top: 468, left: 340 },
+];
+const baseStarsHomeStatic = [
+  { topMd: 576, leftMd: 329 },
+  { topMd: 707, leftMd: 99 },
+  { topMd: 678, leftMd: 1083 },
 ];
 
+const baseStarsContactDinamic = [
+  { topMd: 554, leftMd: 1145, top: 581, left: 152 },
+  { topMd: 487, leftMd: 1314, top: 563, left: 264 },
+  { topMd: 566, leftMd: 1390, top: 567, left: 342 },
+  { topMd: 374, leftMd: 1362, top: 262, left: 346 },
+  { topMd: 269, leftMd: 1310, top: 372, left: 346 },
+];
+const baseStarsContactStatic = [{ topMd: 501, leftMd: 731 }];
+
 export const Stars = () => {
-  const [stars, setStars] = useState<
-    { id: number; top: number; left: number }[]
-  >([]);
-
-  useEffect(() => {
-    const randomizedStars = baseStars.map((star, index) => {
-      const topVariation = (Math.random() - 0.5) * 4;
-      const leftVariation = (Math.random() - 0.5) * 4;
-      return {
-        id: index,
-        top: Math.min(98, Math.max(2, star.top + topVariation)),
-        left: Math.min(98, Math.max(2, star.left + leftVariation)),
-      };
-    });
-    setStars(randomizedStars);
-  }, []);
-
   return (
     <>
-      {stars.map((star) => (
+      {baseStarsHomeDinamic.map((star, index) => (
         <div
-          key={star.id}
-          className='absolute size-1 rounded-full bg-neutral-300/40 md:size-[7.2px]'
-          style={{ top: `${star.top}%`, left: `${star.left}%` }}
+          key={index}
+          className='absolute rounded-full bg-neutral-300/40'
+          style={{
+            top: adjustClamp(star.top, star.topMd, 1442),
+            left: adjustClamp(star.left, star.leftMd, 1442),
+            width: adjustClamp(4, 7.5, 1442),
+            height: adjustClamp(4, 7.5, 1442),
+          }}
+        />
+      ))}
+
+      {baseStarsHomeStatic.map((star, index) => (
+        <div
+          key={index}
+          className='absolute hidden rounded-full bg-neutral-300/40 md:block'
+          style={{
+            top: star.topMd,
+            left: star.leftMd,
+            width: adjustClamp(4, 7.5, 1442),
+            height: adjustClamp(4, 7.5, 1442),
+          }}
+        />
+      ))}
+    </>
+  );
+};
+
+export const StarsContactForm = () => {
+  return (
+    <>
+      {baseStarsContactDinamic.map((star, index) => (
+        <div
+          key={index}
+          className='absolute rounded-full bg-neutral-300/40'
+          style={{
+            top: adjustClamp(star.top, star.topMd, 1442),
+            left: adjustClamp(star.left, star.leftMd, 1442),
+            width: adjustClamp(4, 7.25, 1442),
+            height: adjustClamp(4, 7.25, 1442),
+          }}
+        />
+      ))}
+
+      {baseStarsContactStatic.map((star, index) => (
+        <div
+          key={index}
+          className='absolute hidden rounded-full bg-neutral-300/40 md:block'
+          style={{
+            top: star.topMd,
+            left: star.leftMd,
+            width: adjustClamp(4, 7.25, 1442),
+            height: adjustClamp(4, 7.25, 1442),
+          }}
         />
       ))}
     </>

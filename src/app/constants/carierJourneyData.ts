@@ -13,7 +13,7 @@ export const carierJourneyData: carierJourneyDataProps[] = [
   {
     job: 'Frontend Developer',
     time: 'Jul 2024 - Present',
-    place: 'Google',
+    place: 'Repository Solusi Indonesia',
     details: [
       {
         detail:
@@ -36,7 +36,7 @@ export const carierJourneyData: carierJourneyDataProps[] = [
   {
     job: 'Frontend Developer',
     time: 'Jul 2023 - Jul 2024',
-    place: 'Slack',
+    place: 'Bali United',
     details: [
       {
         detail:
@@ -59,7 +59,7 @@ export const carierJourneyData: carierJourneyDataProps[] = [
   {
     job: 'Frontend Developer',
     time: 'Nov 2021 - Jul 2023',
-    place: 'Skype',
+    place: 'UKUR',
     details: [
       {
         detail:
