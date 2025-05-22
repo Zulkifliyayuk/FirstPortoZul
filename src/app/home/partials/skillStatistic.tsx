@@ -43,6 +43,7 @@ const SkillStatistics = () => {
           <div style={adjustFlexLeft(587, 573, 320)}>
             <BackCircle />
           </div>
+
           {/* right column */}
           <div className='flex-end' style={adjustFlexRight(587, 573, 320)}>
             <div className='my-[45.5px] flex size-full flex-col gap-5'>

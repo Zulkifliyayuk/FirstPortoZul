@@ -56,7 +56,7 @@ export const BackCircle = () => {
               width: adjustClamp(280.75, 515, 1208),
               height: adjustClamp(280.75, 515, 1208),
             }}
-            start={8}
+            start={6}
           />
         </div>
 
@@ -98,7 +98,7 @@ export const BackCircle = () => {
               width: adjustClamp(280.75, 515, 1208),
               height: adjustClamp(280.75, 515, 1208),
             }}
-            start={16}
+            start={15}
             img='/icons/skillHTML.png'
           />
         </div>
@@ -119,7 +119,7 @@ export const BackCircle = () => {
               width: adjustClamp(280.75, 515, 1208),
               height: adjustClamp(280.75, 515, 1208),
             }}
-            start={94}
+            start={92}
             img='/icons/skillCSS.png'
           />
         </div>
@@ -133,7 +133,7 @@ export const BackCircle = () => {
               width: adjustClamp(209.88, 385, 1208),
               height: adjustClamp(209.88, 385, 1208),
             }}
-            start={64}
+            start={62}
             img='/icons/skillReact.png'
           />
         </div>
@@ -157,7 +157,7 @@ export const BackCircle = () => {
               width: adjustClamp(145, 266, 1208),
               height: adjustClamp(145, 266, 1208),
             }}
-            start={16}
+            start={17}
             img='/icons/skillFramer.png'
           />
         </div>

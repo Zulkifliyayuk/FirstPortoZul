@@ -52,7 +52,7 @@ export const SkillMotion: React.FC<SkillMotionProps> = ({
     cy = styleHeight / 2;
     radiusItems = Math.min(styleWidth, styleHeight) / 2 - strokeWidth / 2;
     pathItems = `M ${cx},${cy - radiusItems} a ${radiusItems},${radiusItems} 0 1,1 -0.1,0`;
-    radiusImages = Math.min(styleWidth, styleHeight) / 2 - 20;
+    radiusImages = Math.min(styleWidth, styleHeight) / 2 - 5;
     pathImages = `M ${cx},${cy - radiusImages} a ${radiusImages},${radiusImages} 0 1,1 -0.1,0`;
   }
 
@@ -69,27 +69,6 @@ export const SkillMotion: React.FC<SkillMotionProps> = ({
     ease: 'linear',
   };
 
-  const animationPoints: Record<number, { offset: string; time: number }> = {
-    4: { offset: '4%', time: 0.96 },
-    8: { offset: '8%', time: 0.92 },
-    16: { offset: '16%', time: 0.84 },
-    20: { offset: '20%', time: 0.8 },
-    25: { offset: '25%', time: 0.75 },
-    33: { offset: '33%', time: 0.67 },
-    37: { offset: '37%', time: 0.63 },
-    41: { offset: '41%', time: 0.59 },
-    50: { offset: '50%', time: 0.5 },
-    58: { offset: '58%', time: 0.42 },
-    64: { offset: '64%', time: 0.36 },
-    66: { offset: '66%', time: 0.34 },
-    75: { offset: '75%', time: 0.25 },
-    80: { offset: '80%', time: 0.2 },
-    83: { offset: '83%', time: 0.17 },
-    90: { offset: '90%', time: 0.1 },
-    92: { offset: '92%', time: 0.08 },
-    94: { offset: '94%', time: 0.06 },
-  };
-
   let animate;
 
   if (start === 0) {
@@ -97,8 +76,9 @@ export const SkillMotion: React.FC<SkillMotionProps> = ({
       offsetDistance: ['0%', '50%', '50%', '100%'],
     };
     transition.times = [0, 0.5, 0.5, 1];
-  } else if (start in animationPoints) {
-    const { offset, time } = animationPoints[start];
+  } else {
+    const offset = `${start}%`;
+    const time = (100 - start) / 100;
     animate = {
       offsetDistance: [offset, '100%', '0%', offset],
     };

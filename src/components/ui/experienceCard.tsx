@@ -19,12 +19,12 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
   return (
     <Link href={url}>
       <div
-        className='group flex max-h-[616px] cursor-pointer flex-col overflow-hidden rounded-2xl hover:relative hover:-top-1.5'
+        className='group flex max-h-[616px] cursor-pointer flex-col overflow-hidden rounded-2xl'
         style={{
           width: adjustClamp(320, 370, 1208),
         }}
       >
-        <div>
+        <div className='max-h-[320px] overflow-hidden rounded-4xl md:max-h-[370px]'>
           <Image
             src={imagePage}
             alt={imagePage}
@@ -34,6 +34,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
               width: adjustClamp(320, 370, 1208),
               height: adjustClamp(320, 370, 1208),
             }}
+            className='transform transition-transform duration-300 ease-in-out group-hover:scale-105'
           />
         </div>
 
