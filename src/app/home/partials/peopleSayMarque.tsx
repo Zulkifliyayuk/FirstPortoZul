@@ -28,10 +28,15 @@ const PeopleSayMarque = () => {
 
       {/* section */}
 
-      <div className='py-10 md:py-20'>
+      <div
+        className='mx-auto py-10 md:py-20'
+        style={{
+          width: adjustClamp(320, 739, 1442),
+        }}
+      >
         {/* heading */}
         <div className='text-center'>
-          <h2 className='text-display-sm md:text-display-2xl font-extrabold text-neutral-100'>
+          <h2 className='text-display-sm md:text-display-2xl leading-9.5 font-extrabold text-neutral-100 md:leading-15'>
             What People Say About Me
           </h2>
           <p className='md:text-md font-regular mt-4 text-sm text-neutral-200'>
@@ -41,7 +46,7 @@ const PeopleSayMarque = () => {
         </div>
 
         {/* content */}
-        <div className='mt-8 md:mt-12'>
+        <div className='relative mt-8 md:mt-12'>
           <PeopleSayTop />
           <PeopleSayBottom />
           <div className='absolute inset-y-0 left-0 w-[25%] bg-gradient-to-r from-neutral-600 to-transparent'></div>
