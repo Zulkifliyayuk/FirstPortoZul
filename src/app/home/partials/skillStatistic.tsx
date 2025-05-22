@@ -25,7 +25,7 @@ const SkillStatistics = () => {
     >
       {/* Cloud */}
       <div
-        className='absolute z-110 rounded-full bg-[#8144DF]/60 [filter:blur(125.21px)] md:[filter:blur(285.21px)]'
+        className='absolute z-110 rounded-full bg-[#8144DF]/60 [filter:blur(156.29px)] md:[filter:blur(425.21px)]'
         style={{
           width: adjustClamp(254, 517, 1442),
           height: adjustClamp(254, 517, 1442),

@@ -24,7 +24,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           width: adjustClamp(320, 370, 1208),
         }}
       >
-        <div className='max-h-[320px] touch-auto rounded-4xl md:max-h-[370px]'>
+        <div className='max-h-[320px] overflow-hidden rounded-4xl md:max-h-[370px]'>
           <Image
             src={imagePage}
             alt={imagePage}
@@ -33,6 +33,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             style={{
               width: adjustClamp(320, 370, 1208),
               height: adjustClamp(320, 370, 1208),
+              touchAction: 'auto',
             }}
             className='transform transition-transform duration-300 ease-in-out group-hover:scale-105'
           />
