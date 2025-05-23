@@ -44,14 +44,14 @@ const PeopleSayMarque = () => {
             with me.
           </p>
         </div>
+      </div>
 
-        {/* content */}
-        <div className='relative mt-8 md:mt-12'>
-          <PeopleSayTop />
-          <PeopleSayBottom />
-          <div className='absolute inset-y-0 left-0 w-[25%] bg-gradient-to-r from-neutral-600 to-transparent'></div>
-          <div className='absolute inset-y-0 right-0 w-[25%] bg-gradient-to-l from-neutral-600 to-transparent'></div>
-        </div>
+      {/* content */}
+      <div className='relative mt-8 md:mt-12'>
+        <PeopleSayTop />
+        <PeopleSayBottom />
+        <div className='absolute inset-y-0 left-0 w-[25%] bg-gradient-to-r from-neutral-600 to-transparent'></div>
+        <div className='absolute inset-y-0 right-0 w-[25%] bg-gradient-to-l from-neutral-600 to-transparent'></div>
       </div>
     </div>
   );
