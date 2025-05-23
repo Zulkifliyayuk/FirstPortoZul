@@ -43,15 +43,15 @@ const ImpactStatistics = () => {
         <div
           className='bg-gradient flex-center relative z-80 cursor-pointer rounded-xl md:rounded-4xl'
           style={{
-            width: adjustClamp(459, 1160, 1208),
-            height: adjustClamp(126, 320, 1208),
+            width: adjustClamp(320, 1160, 1208),
+            height: adjustClamp(126.6, 459, 1208),
           }}
         >
           <Image
             src='/images/photo.png'
             alt='photo'
-            width={400}
-            height={400}
+            width={818}
+            height={459}
             className='h-full w-auto object-contain'
             style={{ touchAction: 'auto' }}
           />
