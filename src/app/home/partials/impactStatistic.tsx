@@ -50,8 +50,8 @@ const ImpactStatistics = () => {
           <Image
             src='/images/photo.png'
             alt='photo'
-            width={818}
-            height={459}
+            width={400}
+            height={400}
             className='h-full w-auto object-contain'
             style={{ touchAction: 'auto' }}
           />

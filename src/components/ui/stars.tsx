@@ -17,13 +17,13 @@ const baseStarsHomeStatic = [
 ];
 
 const baseStarsContactDinamic = [
-  { topMd: 554, leftMd: 1145, top: 581, left: 152 },
-  { topMd: 487, leftMd: 1314, top: 563, left: 264 },
-  { topMd: 566, leftMd: 1390, top: 567, left: 342 },
-  { topMd: 374, leftMd: 1362, top: 262, left: 346 },
-  { topMd: 269, leftMd: 1310, top: 372, left: 346 },
+  { bottomMd: 38, leftMd: 1145, bottom: 8, left: 152 },
+  { bottomMd: 105, leftMd: 1314, bottom: 26, left: 264 },
+  { bottomMd: 26, leftMd: 1390, bottom: 22, left: 342 },
+  { bottomMd: 218, leftMd: 1362, bottom: 155, left: 346 },
+  { bottomMd: 323, leftMd: 1310, bottom: 217, left: 346 },
 ];
-const baseStarsContactStatic = [{ topMd: 501, leftMd: 731 }];
+const baseStarsContactStatic = [{ bottomMd: 91, leftMd: 731 }];
 
 export const Stars = () => {
   return (
@@ -65,7 +65,7 @@ export const StarsContactForm = () => {
           key={index}
           className='absolute rounded-full bg-neutral-300/40'
           style={{
-            top: adjustClamp(star.top, star.topMd, 1442),
+            bottom: adjustClamp(star.bottom, star.bottomMd, 1442),
             left: adjustClamp(star.left, star.leftMd, 1442),
             width: adjustClamp(4, 7.25, 1442),
             height: adjustClamp(4, 7.25, 1442),
@@ -78,7 +78,7 @@ export const StarsContactForm = () => {
           key={index}
           className='absolute hidden rounded-full bg-neutral-300/40 md:block'
           style={{
-            top: star.topMd,
+            bottom: star.bottomMd,
             left: star.leftMd,
             width: adjustClamp(4, 7.25, 1442),
             height: adjustClamp(4, 7.25, 1442),

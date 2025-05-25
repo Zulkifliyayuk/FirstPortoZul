@@ -24,7 +24,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
           width: adjustClamp(320, 370, 1208),
         }}
       >
-        <div className='max-h-[320px] overflow-hidden rounded-4xl md:max-h-[370px]'>
+        <div className='relative max-h-[320px] overflow-hidden rounded-4xl md:max-h-[370px]'>
           <Image
             src={imagePage}
             alt={imagePage}
@@ -37,6 +37,15 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             }}
             className='transform transition-transform duration-300 ease-in-out group-hover:scale-105'
           />
+
+          {/* detail hover */}
+          <div className='absolute top-[202px] left-[199px] hidden md:group-hover:block'>
+            <div className='h-[100px] w-[100px] -rotate-[5.57deg] rounded-full bg-gradient-to-r from-[#DC49A6] to-[#8746EB] p-0.5'>
+              <div className='md:text-md flex-center h-full w-full rounded-full bg-neutral-500 leading-7.5 text-neutral-100'>
+                Detail
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className='mt-3 flex flex-col gap-2 md:mt-4 md:gap-3'>
