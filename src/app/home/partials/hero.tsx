@@ -42,7 +42,7 @@ const Hero = () => {
       ></div>
 
       {/* box-background */}
-      <div className='absolute z-0 max-md:top-[-6.2%] max-md:right-[-20.5%] md:top-[0px] md:right-[-95.5px]'>
+      <div className='absolute z-0 max-md:top-[-7.2%] max-md:right-[-15.5%] md:top-[0px] md:right-[-95.5px]'>
         <BoxBackground width={152.5} height={152.5} />
       </div>
 
@@ -56,9 +56,7 @@ const Hero = () => {
 
         {/* sm show case */}
         <h1 className='text-display-xl md:text-display-3xl tracking--2 mt-5 flex max-w-239 flex-wrap items-start justify-center gap-y-1 text-start leading-12 font-bold text-neutral-100 sm:hidden md:mt-6 md:hidden md:leading-18 md:font-extrabold md:tracking-normal'>
-          <span className='mr-4'>I</span>
-          <span className='mr-4'>am</span>
-          <span className='mr-2'>a</span>
+          <span className='mr-1'>I am a</span>
 
           {['Front-', 'End Developer'].map((word, index) => (
             <span
@@ -68,7 +66,7 @@ const Hero = () => {
               {word === 'End Developer' ? (
                 <div className='relative bg-neutral-600 pt-1 pb-2.25 leading-[30px]'>
                   <BoxBorderEndDeveloper />
-                  <span className='bg-gradient-to-r from-[#DC49A6] to-[#8746EB] bg-clip-text pr-1.5 pl-0.5 text-transparent'>
+                  <span className='bg-gradient-to-r from-[#DC49A6] to-[#8746EB] bg-clip-text pr-2.5 pl-0.5 text-transparent'>
                     {word}
                   </span>
                 </div>
@@ -83,7 +81,7 @@ const Hero = () => {
             </span>
           ))}
 
-          <span className='mr-4 ml-2'>&</span>
+          <span className='mr-2 ml-2'>&</span>
           <span className='mr-4'>Web</span>
           <span className='mr-4'>Programming</span>
           <span>Instructor</span>

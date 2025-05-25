@@ -43,7 +43,7 @@ export const BoxBackground: React.FC<BoxBackgroundProps> = ({
         ></div>
       </div>
 
-      {Array.from({ length: 5 }).map((_, irow) => (
+      {Array.from({ length: 7 }).map((_, irow) => (
         <div className='flex flex-row' key={irow}>
           <div
             className='border-t border-b border-neutral-300/10'
