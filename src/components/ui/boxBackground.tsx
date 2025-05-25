@@ -114,14 +114,14 @@ export const BoxBackgroundContactForm: React.FC<BoxBackgroundProps> = ({
     <div className='relative flex flex-col'>
       <div className='flex flex-row'>
         <div
-          className='border-neutral-300/10'
+          className='border-neutral-300/'
           style={{
             width: adjustClamp(40 + 1, width + 1, 1442),
             height: adjustClamp(40 + 1, height + 1, 1442),
           }}
         ></div>
 
-        {Array.from({ length: 7 }).map((_, i) => (
+        {Array.from({ length: 8 }).map((_, i) => (
           <div
             key={i}
             className='border-r border-l border-neutral-300/10'
@@ -151,7 +151,7 @@ export const BoxBackgroundContactForm: React.FC<BoxBackgroundProps> = ({
             }}
           ></div>
 
-          {Array.from({ length: 7 }).map((_, icol) => (
+          {Array.from({ length: 8 }).map((_, icol) => (
             <div
               key={icol}
               className='border border-neutral-300/10'
@@ -181,7 +181,7 @@ export const BoxBackgroundContactForm: React.FC<BoxBackgroundProps> = ({
           }}
         ></div>
 
-        {Array.from({ length: 7 }).map((_, i) => (
+        {Array.from({ length: 8 }).map((_, i) => (
           <div
             key={i}
             className='border-r border-l border-neutral-300/10'

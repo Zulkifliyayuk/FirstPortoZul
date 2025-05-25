@@ -1,8 +1,8 @@
 import { StaticImageData } from 'next/image';
 
-import iconEarth from '@/icons/SocialIcon.png';
-import iconInstagram from '@/icons/SocialIG.png';
-import iconLinkedin from '@/icons/SocialLink.png';
+import iconEarth from '@/assets/icons/SocialIcon.png';
+import iconInstagram from '@/assets/icons/SocialIG.png';
+import iconLinkedin from '@/assets/icons/SocialLink.png';
 
 type Icon = {
   href: string;

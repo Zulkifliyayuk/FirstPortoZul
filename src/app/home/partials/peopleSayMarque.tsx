@@ -29,7 +29,7 @@ const PeopleSayMarque = () => {
       {/* section */}
 
       <div
-        className='mx-auto py-10 md:py-20'
+        className='mx-auto pt-10 md:pt-20'
         style={{
           width: adjustClamp(320, 739, 1442),
         }}
@@ -47,11 +47,11 @@ const PeopleSayMarque = () => {
       </div>
 
       {/* content */}
-      <div className='relative mt-8 md:mt-12'>
+      <div className='relative mt-8 mb-10 md:mt-12 md:mb-20'>
         <PeopleSayTop />
         <PeopleSayBottom />
-        <div className='absolute inset-y-0 left-0 w-[25%] bg-gradient-to-r from-neutral-600 to-transparent'></div>
-        <div className='absolute inset-y-0 right-0 w-[25%] bg-gradient-to-l from-neutral-600 to-transparent'></div>
+        <div className='relative inset-y-0 left-0 w-[25%] bg-gradient-to-r from-neutral-600 to-transparent'></div>
+        <div className='relative inset-y-0 right-0 w-[25%] bg-gradient-to-l from-neutral-600 to-transparent'></div>
       </div>
     </div>
   );
