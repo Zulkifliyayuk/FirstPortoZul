@@ -61,20 +61,20 @@ export const FormStatusDialog: React.FC<FormStatusDialog> = ({
           <div>
             {variant === 'success' ? (
               <>
-                <p className='text-center text-lg leading-8 font-semibold text-neutral-100 md:text-xl md:leading-8.5'>
+                <p className='font-weight-semibold text-center text-lg leading-8 text-neutral-100 md:text-xl md:leading-8.5'>
                   Message Sent Successfully!
                 </p>
-                <p className='md:text-md font-regular mt-2 text-center text-sm leading-6 text-neutral-200 md:leading-7.5'>
+                <p className='md:text-md font-weight-regular mt-2 text-center text-sm leading-6 text-neutral-200 md:leading-7.5'>
                   Thank you for reaching out. I’ll get back to you as soon as
                   possible
                 </p>
               </>
             ) : (
               <>
-                <p className='text-center text-lg leading-8 font-semibold text-neutral-100 md:text-xl md:leading-8.5'>
+                <p className='font-weight-semibold text-center text-lg leading-8 text-neutral-100 md:text-xl md:leading-8.5'>
                   Message failed to send.
                 </p>
-                <p className='md:text-md font-regular mt-2 text-center text-sm leading-6 text-neutral-200 md:leading-7.5'>
+                <p className='md:text-md font-weight-regular mt-2 text-center text-sm leading-6 text-neutral-200 md:leading-7.5'>
                   An unexpected error occurred. Kindly try again in a few
                   moments.
                 </p>
@@ -84,7 +84,7 @@ export const FormStatusDialog: React.FC<FormStatusDialog> = ({
           <Button
             onClick={() => onOpenChange(false)}
             size='default'
-            className='w-full'
+            className='font-weight-medium w-full text-sm leading-6'
           >
             Back to Home
           </Button>

@@ -12,9 +12,11 @@ export const InputGroup: React.FC<InputGroupProps> = ({
   return (
     <div>
       <div>{children}</div>
-      <div className='md:text-md mt-2 text-lg text-[#DC49A6]'>
-        {errorMessage}
-      </div>
+      {errorMessage && (
+        <div className='md:text-md mt-2 text-lg text-[#DC49A6]'>
+          {errorMessage}
+        </div>
+      )}
     </div>
   );
 };

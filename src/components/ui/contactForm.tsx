@@ -88,7 +88,12 @@ export const ContactForm: React.FC = () => {
               placeholder='Message'
             />
           </InputGroup>
-          <Button disabled={loading} type='submit' size='default'>
+          <Button
+            disabled={loading}
+            type='submit'
+            size='default'
+            className='md:text-md mt-[-10px] text-sm leading-6 font-semibold md:leading-7.5 md:font-medium'
+          >
             Send
           </Button>
         </div>

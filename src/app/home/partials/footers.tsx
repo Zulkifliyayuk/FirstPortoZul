@@ -23,12 +23,12 @@ export const Footers = () => {
       >
         <div className='flex-between flex-wrap-reverse gap-x-20 gap-y-6'>
           <div
-            className='inline-flex gap-4'
+            className='inline-flex items-center gap-4'
             style={{
               width: adjustClamp(129, 144, 1442),
             }}
           >
-            <Image src='/images/logoVector.png' alt='' width={40} height={40} />{' '}
+            <Image src='/images/logoVector.png' alt='' width={40} height={40} />
             <span className='md:text-md font-regular text-sm leading-6 text-neutral-200 md:leading-7.5'>
               © alex2024
             </span>

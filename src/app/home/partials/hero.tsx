@@ -162,6 +162,7 @@ const Hero = () => {
           alt='waves'
           width={1442.6}
           height={380.7}
+          priority
           className='relative top-[0] z-70 -mt-6 items-center justify-center object-cover md:-mt-12'
           style={{
             objectFit: 'cover',

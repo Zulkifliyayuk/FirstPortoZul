@@ -66,7 +66,7 @@ const FormContact = () => {
           {/* right section */}
           <div
             className={cn(
-              'z-130 rounded-4xl border border-[#262626]/40 bg-[#262626]/40 backdrop-blur-[40px]',
+              'z-130 rounded-3xl border border-[#262626] bg-[#FFFFFF]/5 backdrop-blur-[40px] md:rounded-4xl',
               ''
             )}
             style={{
