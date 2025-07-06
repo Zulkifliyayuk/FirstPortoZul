@@ -2,11 +2,7 @@
 import React from 'react';
 
 import { useInView } from '@/components/hooks/useInView';
-import {
-  adjustClamp,
-  adjustFlexLeft,
-  adjustFlexRight,
-} from '@/components/layout/functions';
+import { adjustClamp } from '@/components/layout/functions';
 import { Section } from '@/components/layout/section';
 import { BackCircle } from '@/components/ui/backCircle';
 
@@ -38,15 +34,15 @@ const SkillStatistics = () => {
         title='My Core Skill'
         subtitle='An overview of the key technologies and frameworks I specialize in'
       >
-        <div className='flex flex-wrap items-center gap-6 md:gap-26'>
+        <div className='flex w-full flex-wrap items-center justify-center gap-x-26 gap-y-6'>
           {/* left column */}
-          <div style={adjustFlexLeft(587, 573, 320)}>
+          <div className='flex-[5.1] basis-80'>
             <BackCircle />
           </div>
 
           {/* right column */}
-          <div className='flex-end' style={adjustFlexRight(587, 573, 320)}>
-            <div className='my-[45.5px] flex size-full flex-col gap-5'>
+          <div className='flex-[4.9] basis-80'>
+            <div className='flex w-full flex-col gap-5'>
               {SkillData.map((data) => (
                 <div key={data.name}>
                   <div className='flex-between'>

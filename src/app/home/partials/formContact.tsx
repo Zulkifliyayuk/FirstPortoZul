@@ -42,39 +42,25 @@ const FormContact = () => {
       <div className='absolute top-[172px] right-[180px] z-1 rounded-full bg-[#8243EA]/40 [filter:blur(159px)] max-md:block max-md:h-[196] max-md:w-[196px] md:hidden'></div>
 
       {/* content */}
-      <div
-        className='mx-auto my-0 pt-10 pb-10 md:pt-20 md:pb-25'
-        style={{
-          width: adjustClamp(320, 1160, 1440),
-        }}
-      >
-        <div className='flex flex-wrap items-center justify-center gap-y-6 md:justify-between'>
-          {/* left section */}
-          <div
-            style={{
-              width: adjustClamp(320, 457, 1440),
-            }}
-          >
-            <h2 className='text-display-sm md:text-display-2xl leading-9.5 font-extrabold text-neutral-100 md:leading-15'>
-              Contact Me
-            </h2>
-            <p className='md:text-md font-regular mt-3 text-sm leading-6 text-neutral-200 md:leading-7.5'>
-              Feel free to drop a message for any inquiries or collaborations.
-            </p>
-          </div>
+      <div className='mx-auto my-0 flex w-full max-w-312 flex-wrap items-center justify-center gap-y-6 px-6 py-10 md:gap-x-55.75 md:pt-20 md:pb-25'>
+        {/* left section */}
+        <div className='flex-[4.6] basis-80'>
+          <h2 className='text-display-sm md:text-display-2xl leading-9.5 font-extrabold text-neutral-100 md:leading-15'>
+            Contact Me
+          </h2>
+          <p className='md:text-md font-regular mt-3 text-sm leading-6 text-neutral-200 md:leading-7.5'>
+            Feel free to drop a message for any inquiries or collaborations.
+          </p>
+        </div>
 
-          {/* right section */}
-          <div
-            className={cn(
-              'z-130 rounded-3xl border border-[#262626] bg-[#FFFFFF]/5 backdrop-blur-[40px] md:rounded-4xl',
-              ''
-            )}
-            style={{
-              width: adjustClamp(320, 480, 1440),
-            }}
-          >
-            <ContactForm />
-          </div>
+        {/* right section */}
+        <div
+          className={cn(
+            'z-130 rounded-3xl border border-[#262626] bg-[#FFFFFF]/5 backdrop-blur-[40px] md:rounded-4xl',
+            'flex-[5.4] basis-80'
+          )}
+        >
+          <ContactForm />
         </div>
       </div>
     </div>
